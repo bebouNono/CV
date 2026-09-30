@@ -36,7 +36,7 @@ console.log(sortedKeys);
 const rouge = (tag)=>{
   let f = document.querySelectorAll(tag);
   for (const tags of f){
-    tags.classList.add("red");
+    tags.classList.toggle("red");
   }
 }
 
