@@ -73,7 +73,7 @@ const createTable = (data) => {
     buttonCell.addEventListener("click", () => rouge(tag))
 
     tagCell.style.border = countCell.style.border = buttonCell.style.border = "1px solid black";
-    tagCell.style.padding = countCell.style.padding = buttonCell.style.border = "5px";
+    tagCell.style.padding = countCell.style.padding = buttonCell.style.padding = "5px";
   }
 
 document.body.insertAdjacentHTML("afterbegin", table.outerHTML);
