@@ -69,7 +69,7 @@ const createTable = (data) => {
 
     tagCell.textContent = tag;
     countCell.textContent = count;
-    buttonCell.innerHTML = `<button data-tag="${tag}">Trouvé</button>`;
+    buttonCell.innerHTML = `<button data="${tag}">Trouvé</button>`;
     buttonCell.addEventListener("click", () => rouge(tag))
 
     tagCell.style.border = countCell.style.border = buttonCell.style.border = "1px solid black";
