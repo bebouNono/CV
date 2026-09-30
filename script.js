@@ -69,15 +69,22 @@ const createTable = (data) => {
 
     tagCell.textContent = tag;
     countCell.textContent = count;
-    buttonCell.innerHTML = "<button> Trouvé </button>"
+    buttonCell.innerHTML = `<button data-tag="${tag}">Trouvé</button>`;
     buttonCell.addEventListener("click", () => rouge(tag))
 
     tagCell.style.border = countCell.style.border = buttonCell.style.border = "1px solid black";
     tagCell.style.padding = countCell.style.padding = buttonCell.style.border = "5px";
   }
 
- // document.body.appendChild(table);
-  document.body.insertAdjacentHTML("afterbegin", table.outerHTML);
+document.body.insertAdjacentHTML("afterbegin", table.outerHTML);
+
+const buttons = document.querySelectorAll("table button");
+
+for (const button of buttons) {
+  button.addEventListener("click", () => {
+    rouge(button.dataset.tag);
+  });
+}
 };
 
 // Display the table
